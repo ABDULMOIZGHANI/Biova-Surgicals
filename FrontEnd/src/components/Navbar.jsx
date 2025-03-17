@@ -44,7 +44,7 @@ export default function Navbar() {
                             placeholder="Search"
                             className="px-3 py-2 outline-none w-40"
                         />
-                        <button className="bg-teal-500 text-white px-3 cursor-pointer py-3">
+                        <button className="bg-[#02BBB6] text-white px-3 cursor-pointer py-3">
                             <IoSearch size={25} />
                         </button>
                     </div>
@@ -72,6 +72,8 @@ export default function Navbar() {
                     </ul>
                 </div>
             )}
+
+
         </nav>
 
         <div className="flex md:hidden justify-between w-[95%] m-auto mt-[20px] items-center border border-[#008581] rounded-md overflow-hidden">

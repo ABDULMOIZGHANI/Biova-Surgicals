@@ -1,10 +1,11 @@
 import React from 'react'
+import MainSection from '../components/MainSection'
 
 const Home = () => {
     return (
-        <div>
-            HOME
-        </div>
+        <main>
+            <MainSection />
+        </main>
     )
 }
 
