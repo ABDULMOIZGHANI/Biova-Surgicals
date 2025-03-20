@@ -45,6 +45,10 @@ const productSchema = new mongoose.Schema(
     description: {
       type: String
     },
+    feature_product: {
+      type: String,
+      default: false
+    },
     reviews: [reviewSchema]
   },
   { timestamps: true }
