@@ -1,0 +1,12 @@
+{
+  "name": "biova-surgical-backend",
+  "version": "1.0.0",
+  "description": "This is the backend for biova surgical where sells the medical related isntruments",
+  "license": "ISC",
+  "author": "ABDUL MOIZ",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
