@@ -8,7 +8,7 @@ const MainSection = () => {
 
     return (
         <section className='relative'>
-            <section className='h-auto md:h-[100vh] flex flex-col md:flex-row justify-between items-center w-[100%] lg:w-[80%] md:w-[90%] m-auto md:pt-[0px] pt-[70px]'>
+            <section className='h-auto md:h-[100vh] flex flex-col md:flex-row justify-between items-center w-[100%] lg:w-[80%] md:w-[90%] m-auto md:pt-[0px] pt-[70px] md:pb-[0px] pb-[70px]'>
                 <div className='w-[95%] md:w-[50%] flex flex-col gap-[20px]'>
                     <div>
                         <p className='lato text-[#00625F] font-bold text-[16px]'>Trusted by Healthcare Professionals</p>
@@ -32,7 +32,7 @@ const MainSection = () => {
                 </div>
 
                 <div>
-                    <img src="/Home/Home Main Image.png" alt="" className='h-auto sm:h-[535px] md:mt-[0px] mt-[40px]' />
+                    <img src="/Home/Home Main Image.png" alt="" className='h-auto sm:h-[535px] md:mt-[0px] mt-[60px]' />
                 </div>
             </section>
 

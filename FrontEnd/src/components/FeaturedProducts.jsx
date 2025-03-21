@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import Button from './Button';
 import Product_card from './Product_card';
+import MainButton from './MainButton';
+import { Link } from 'react-router-dom';
 
 const FeaturedProducts = () => {
     const [products, setProduct] = useState([]);
@@ -20,13 +22,19 @@ const FeaturedProducts = () => {
 
     return (
         <div className='mt-[70px]'>
-            <p className='text-[#4F7D7B] text-center lato text-[20px]'>Highly Affordable Products</p>
+            <p className='text-[#02BBB6] text-center lato text-[20px] mb-[-20px]'>Highly Affordable Products</p>
             <h1 className='text-[#00605f] playfair font-bold text-[30px] md:text-[46px] text-center tracking-[1.5px] mt-[20px]'>Featured Products</h1>
 
             <div className='flex w-[95%] m-auto gap-[20px] mt-[50px] flex-wrap'>
                 {products.filter(feature_products => feature_products.feature_product === "true").map((product) => (
                     <Product_card product={product} key={product._id} />))}
             </div>
+
+            <Link to="/products">
+                <div className='text-center m-20'>
+                    <MainButton value="EXPLORE COLLECTION" />
+                </div>
+            </Link>
         </div>
     )
 }
