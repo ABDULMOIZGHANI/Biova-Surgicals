@@ -25,7 +25,7 @@ const ShopWithConfidence = () => {
             <p className='text-[#02BBB6] text-center lato text-[20px]'>Biova Surgical Guarantee</p>
             <h1 className='text-[#00605f] playfair font-bold text-[30px] md:text-[46px] text-center tracking-[1.5px] mb-[30px]'>Shop With Confidence</h1>
 
-            <div className="w-[85%] max-w-[1450px] m-auto bg-[#DEFDFC] flex justify-evenly gap-[20px] p-[30px] pt-[50px] pb-[50px] rounded-[12px] mb-20 shadow-[8px_8px_12px_rgba(0,0,0,0.25)]  flex-col md:flex-row">
+            <div className="w-[90%] max-w-[1450px] m-auto bg-[#DEFDFC] flex justify-evenly gap-[20px] p-[30px] pt-[50px] pb-[50px] rounded-[12px] mb-20 shadow-[8px_8px_12px_rgba(0,0,0,0.25)]  flex-col md:flex-row">
                 {shop.map((value, i) => (
                     <div
                         key={i}
