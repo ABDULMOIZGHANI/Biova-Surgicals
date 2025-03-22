@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { API_NAME } from "../constant/index.js"
 import Product_card from '../components/Product_card.jsx';
 import { FaChevronDown } from "react-icons/fa";
+import WhyChoose from '../components/WhyChoose.jsx';
 
 const Products = () => {
 
@@ -21,7 +22,7 @@ const Products = () => {
             .catch((err) => console.log("ERROR", err));
     }, []);
 
-    return (
+    return (<>
         <div className='mt-[30px] md:mt-[70px] w-[95%] max-w-[1350px] m-auto'>
 
             <div className="flex justify-center sm:justify-end mt-[0px] md:mt-4 mb-10">
@@ -71,7 +72,7 @@ const Products = () => {
             <p className='text-[#02BBB6] text-center lato text-[20px] mb-[-20px]'>Biova Surgical brings you a wide range of premium surgical instruments, medical devices, and healthcare solutions. Designed for precision, durability, and reliability, our products are trusted by top healthcare professionals and medical institutions worldwide.</p>
             <h1 className='text-[#00605f] playfair font-bold text-[30px] md:text-[46px] text-center tracking-[1.5px] mt-[20px]'>Explore High-Quality Surgical & Medical Equipments</h1>
 
-            <div className="flex w-[100%] m-auto gap-[20px] mt-[50px] flex-wrap">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] w-[100%] mx-auto mt-[50px]">
                 {products
                     .filter(product =>
                         selectedCategory === "Select Product Categories" || selectedCategory === "" || product.category === selectedCategory
@@ -81,6 +82,9 @@ const Products = () => {
                     ))}
             </div>
         </div>
+
+        <WhyChoose />
+    </>
     )
 }
 

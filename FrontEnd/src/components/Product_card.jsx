@@ -14,7 +14,7 @@ const Product_card = ({ product }) => {
     };
 
     return (
-        <div className='w-full sm:max-w-[48%] md:max-w-[31%] lg:max-w-[23.8%] px-[12px] py-[23px] border-[2px] border-[#00625F] rounded-[5px] bg-[#DEFDFC] flex flex-col gap-[15px]'>
+        <div className='w-full  px-[12px] py-[23px] border-[2px] border-[#00625F] rounded-[5px] bg-[#DEFDFC] flex flex-col gap-[15px]'>
             <Link to={`/product-detail/${product._id}`}>
                 <div className="relative overflow-hidden group">
                     <img
