@@ -14,7 +14,7 @@ const Product_card = ({ product }) => {
     };
 
     return (
-        <div className='max-w-[333px] px-[12px] py-[23px] border-[2px] border-[#00625F] rounded-[5px] bg-[#DEFDFC] flex flex-col gap-[15px]' >
+        <div className='w-full sm:max-w-[48%] md:max-w-[31%] lg:max-w-[23.8%] px-[12px] py-[23px] border-[2px] border-[#00625F] rounded-[5px] bg-[#DEFDFC] flex flex-col gap-[15px]'>
             <Link to={`/product-detail/${product._id}`}>
                 <div className="relative overflow-hidden group">
                     <img
@@ -29,36 +29,35 @@ const Product_card = ({ product }) => {
                     />
                 </div>
             </Link>
-            <h3 className='lato text-[16px] font-semibold text-[#262626] text-center'>{product.title}</h3>
+            <h3 className='lato text-[14px] sm:text-[16px] font-semibold text-[#262626] text-center'>{product.title}</h3>
 
             <div className='flex justify-between items-center cursor-pointer underline'>
-                <img src='/reviews/Stars .png' alt="" className='w-[127px]' />
+                <img src='/reviews/Stars .png' alt="" className='w-[100px] sm:w-[127px]' />
                 <Link to={`/product-detail/${product._id}`}>
                     <p>see more...</p>
                 </Link>
             </div>
             <div className='flex justify-between items-center'>
+                <p className='lato text-[15px] sm:text-[17px] font-semibold text-[#262626]'>RS {product.price}</p>
 
-                <p className='lato text-[17px] font-semibold text-[#262626]'>RS {product.price}</p>
-
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2 sm:space-x-4">
                     <button
                         onClick={decrementValue}
-                        className="bg-[#02BBB6] text-white px-4 py-2 hover:bg-[#008f8a] cursor-pointer text-[18px] font-bold"
+                        className="bg-[#02BBB6] text-white px-3 sm:px-4 py-1 sm:py-2 hover:bg-[#008f8a] cursor-pointer text-[16px] sm:text-[18px] font-bold"
                     >
                         -
                     </button>
-                    <span className="text-lg">{value}</span>
+                    <span className="text-[14px] sm:text-lg">{value}</span>
                     <button
                         onClick={incrementValue}
-                        className="bg-[#02BBB6] text-white px-4 py-2 hover:bg-[#008f8a] cursor-pointer text-[18px] font-bold"
+                        className="bg-[#02BBB6] text-white px-3 sm:px-4 py-1 sm:py-2 hover:bg-[#008f8a] cursor-pointer text-[16px] sm:text-[18px] font-bold"
                     >
                         +
                     </button>
                 </div>
             </div>
-            <button className='rounded-[5px] bg-[#02BBB6] lato font-bold text-[17px] text-[#fff] px-7 py-3 cursor-pointer'>ADD TO CART</button>
-        </div >
+            <button className='rounded-[5px] bg-[#02BBB6] lato font-bold text-[15px] sm:text-[17px] text-[#fff] px-5 sm:px-7 py-2 sm:py-3 cursor-pointer'>ADD TO CART</button>
+        </div>
     )
 }
 

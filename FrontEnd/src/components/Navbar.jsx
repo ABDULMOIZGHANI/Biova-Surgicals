@@ -14,7 +14,7 @@ export default function Navbar() {
     };
 
     return (<>
-        <nav className="py-3 bg-white shadow-lg sticky top-[0px] z-[100] absolute">
+        <nav className="py-3 bg-white shadow-lg sticky top-[0px] z-[100]">
             <div className="flex items-center justify-between w-[95%] md:w-[85%] m-auto">
                 <div className="cursor-pointer">
                     <Link to="/">
@@ -38,7 +38,7 @@ export default function Navbar() {
                     </ul>
 
                     {/* Search Bar (hidden on small screens) */}
-                    <div className="hidden md:flex items-center border border-[#02BBB6] border-[2px] h-[41px] rounded-md overflow-hidden">
+                    <div className="hidden md:flex items-center border-[#02BBB6] border-[2px] h-[41px] rounded-md overflow-hidden">
                         <input
                             type="text"
                             placeholder="Search"

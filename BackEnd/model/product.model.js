@@ -45,6 +45,12 @@ const productSchema = new mongoose.Schema(
     description: {
       type: String
     },
+
+    category: {
+      type: String,
+      required: true
+    },
+
     feature_product: {
       type: String,
       default: false
