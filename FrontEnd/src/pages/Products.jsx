@@ -9,7 +9,7 @@ const Products = () => {
 
     const [products, setProduct] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("");
-    const [isOpen, setIsOpen] = useState(false); // Dropdown state
+    const [isOpen, setIsOpen] = useState(false);
 
     console.log(products);
 
