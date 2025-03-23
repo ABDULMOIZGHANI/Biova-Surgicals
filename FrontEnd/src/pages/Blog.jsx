@@ -1,7 +1,20 @@
-import React from 'react'
-import BlogCart from '../components/BlogCart'
+import React, { useEffect, useState } from 'react'
+import BlogCard from '../components/BlogCard'
+import axios from 'axios';
+import { API_NAME } from "../constant/index.js"
 
 const Blog = () => {
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get(`${API_NAME}/api/all_blogs`)
+            .then((result) => {
+                setBlogs(result.data);
+            })
+            .catch((err) => console.log("ERROR", err));
+    }, []);
+
     return (
         <section className="py-10 bg-white sm:py-16 lg:py-24">
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -13,8 +26,9 @@ const Blog = () => {
 
                 </div>
 
-                <BlogCart />
-
+                <div className="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
+                    {blogs.map((blog, i) => <BlogCard blog={blog} key={i} />)}
+                </div>
             </div>
         </section>
 

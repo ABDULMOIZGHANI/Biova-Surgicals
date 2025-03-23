@@ -25,7 +25,7 @@ const FeaturedProducts = () => {
             <p className='text-[#02BBB6] text-center lato text-[20px] mb-[-20px]'>Highly Affordable Products</p>
             <h1 className='text-[#00605f] playfair font-bold text-[30px] md:text-[46px] text-center tracking-[1.5px] mt-[20px]'>Featured Products</h1>
 
-            <div className='flex w-[95%] m-auto gap-[20px] mt-[50px] flex-wrap'>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] w-[100%] mx-auto mt-[50px]">
                 {products.filter(feature_products => feature_products.feature_product === "true").map((product) => (
                     <Product_card product={product} key={product._id} />))}
             </div>
