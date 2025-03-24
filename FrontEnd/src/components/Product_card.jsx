@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cartSlice";
 
 const Product_card = ({ product }) => {
 
@@ -11,6 +13,12 @@ const Product_card = ({ product }) => {
 
     const incrementValue = () => {
         setValue(prevValue => prevValue + 1);
+    };
+
+    const dispatch = useDispatch();
+
+    const handleAddToCart = () => {
+        dispatch(addToCart({ ...product, quantity: value }));
     };
 
     return (
@@ -56,7 +64,7 @@ const Product_card = ({ product }) => {
                     </button>
                 </div>
             </div>
-            <button className='rounded-[5px] bg-[#02BBB6] lato font-bold text-[15px] sm:text-[17px] text-[#fff] px-5 sm:px-7 py-2 sm:py-3 cursor-pointer'>ADD TO CART</button>
+            <button onClick={handleAddToCart} className='rounded-[5px] bg-[#02BBB6] lato font-bold text-[15px] sm:text-[17px] text-[#fff] px-5 sm:px-7 py-2 sm:py-3 cursor-pointer'>ADD TO CART</button>
         </div>
     )
 }

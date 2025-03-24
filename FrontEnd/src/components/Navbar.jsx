@@ -4,6 +4,7 @@ import { IoSearch } from 'react-icons/io5';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RxCross2 } from "react-icons/rx"
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
 
@@ -12,6 +13,8 @@ export default function Navbar() {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
     return (<>
         <nav className="py-3 bg-white shadow-lg sticky top-[0px] z-[100]">
@@ -51,12 +54,18 @@ export default function Navbar() {
 
                     {/* Right Side Icons */}
                     <div className="flex items-center space-x-4">
-                        <button className="relative mr-[11px] md:mr-[0px]">
-                            <AiOutlineShoppingCart size={30} className="text-[#008581]" />
-                            <span className="absolute -top-[11px] -right-[11px] bg-[#02BBB6] text-white text-xs px-2 py-1 rounded-full">
-                                0
-                            </span>
-                        </button>
+                        <Link to="/your-cart">
+                            <button className="relative mr-[11px] md:mr-[0px]">
+                                <AiOutlineShoppingCart size={30} className="text-[#008581]" />
+                                {totalQuantity > 0 ? (
+                                    <span className="absolute -top-[11px] -right-[11px] bg-[#02BBB6] text-white text-xs px-2 py-1 rounded-full">
+                                        {totalQuantity}
+                                    </span>
+                                ) : <span className="absolute -top-[11px] -right-[11px] bg-[#02BBB6] text-white text-xs px-2 py-1 rounded-full">
+                                    0
+                                </span>}
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

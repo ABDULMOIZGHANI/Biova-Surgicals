@@ -7,6 +7,7 @@ import Contact from "./pages/Contact.jsx"
 import SingleProductDetail from './pages/SingleProductDetail.jsx';
 import Footer from './components/Footer.jsx';
 import SingleBlog from './pages/SingleBlog.jsx';
+import Cart from './pages/Cart.jsx';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:title" element={<SingleBlog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/your-cart" element={<Cart />} />
       </Routes>
       <Footer />
     </BrowserRouter>
