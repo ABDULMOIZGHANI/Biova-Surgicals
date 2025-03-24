@@ -5,6 +5,7 @@ const connectDB = require("./db/index.js");
 const Product = require("./model/product.model.js");
 const Blog = require("./model/blog.js");
 const orderRoutes = require("./routes/orderRoutes.js");
+const contactRoutes = require("./routes/contactRoutes.js");
 
 const app = express();
 app.use(cors());
@@ -13,6 +14,7 @@ app.use(express.json());
 connectDB()
   .then(() => {
     app.use("/api/orders", orderRoutes);
+    app.use("/api/contact", contactRoutes);
 
     // BLOG API ENDPOINTS
     app.get("/api/all_blogs", (req, res) => {

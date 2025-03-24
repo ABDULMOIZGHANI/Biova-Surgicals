@@ -3,8 +3,7 @@ import { API_NAME } from "../constant/index.js";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-import { addToCart } from "../features/cartSlice"; // Import addToCart action
-import Button from "../components/Button.jsx";
+import { addToCart } from "../features/cartSlice";
 import MainButton from "../components/MainButton.jsx";
 import Product_reviews_description from "../components/Product_reviews_description.jsx";
 
