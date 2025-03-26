@@ -11,6 +11,7 @@ import Cart from './pages/Cart.jsx';
 import ThankYou from './pages/ThankYou.jsx';
 import { useState } from 'react';
 import About from './pages/About.jsx';
+import Features from './pages/Features.jsx';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/your-cart" element={<Cart />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/about-us" element={<About />} />
+        <Route path="/our-features" element={<Features />} />
       </Routes>
       <Footer />
     </BrowserRouter>
