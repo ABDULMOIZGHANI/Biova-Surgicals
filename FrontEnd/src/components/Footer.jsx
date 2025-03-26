@@ -43,15 +43,11 @@ const Footer = () => {
                             </li>
 
                             <li>
-                                <a href="#" title="" className="flex text-sm text-gray-800 transition-all duration-200 hover:text-[#02BBB6] focus:text-[#02BBB6]"> Delivery Details </a>
-                            </li>
-
-                            <li>
                                 <a href="#" title="" className="flex text-sm text-gray-800 transition-all duration-200 hover:text-[#02BBB6] focus:text-[#02BBB6]"> Terms & Conditions </a>
                             </li>
 
                             <li>
-                                <a href="#" title="" className="flex text-sm text-gray-800 transition-all duration-200 hover:text-[#02BBB6] focus:text-[#02BBB6]"> Privacy Policy </a>
+                                <Link to="/privacy-policy" title="" className="flex text-sm text-gray-800 transition-all duration-200 hover:text-[#02BBB6] focus:text-[#02BBB6]"> Privacy Policy </Link>
                             </li>
                         </ul>
                     </div>
