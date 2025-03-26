@@ -10,6 +10,7 @@ import SingleBlog from './pages/SingleBlog.jsx';
 import Cart from './pages/Cart.jsx';
 import ThankYou from './pages/ThankYou.jsx';
 import { useState } from 'react';
+import About from './pages/About.jsx';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/your-cart" element={<Cart />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/about-us" element={<About />} />
       </Routes>
       <Footer />
     </BrowserRouter>

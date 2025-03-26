@@ -25,19 +25,11 @@ const Footer = () => {
 
                         <ul className="mt-6 space-y-5">
                             <li>
-                                <a href="#" title="" className="flex text-sm text-gray-800 transition-all duration-200 hover:text-[#02BBB6] focus:text-[#02BBB6]"> About </a>
+                                <Link to="/about-us" title="" className="flex text-sm text-gray-800 transition-all duration-200 hover:text-[#02BBB6] focus:text-[#02BBB6]"> About </Link>
                             </li>
 
                             <li>
-                                <a href="#" title="" className="flex text-sm text-gray-800 transition-all duration-200 hover:text-[#02BBB6] focus:text-[#02BBB6]"> Features </a>
-                            </li>
-
-                            <li>
-                                <a href="#" title="" className="flex text-sm text-gray-800 transition-all duration-200 hover:text-[#02BBB6] focus:text-[#02BBB6]"> Works </a>
-                            </li>
-
-                            <li>
-                                <a href="#" title="" className="flex text-sm text-gray-800 transition-all duration-200 hover:text-[#02BBB6] focus:text-[#02BBB6]"> Career </a>
+                                <Link to="/features" title="" className="flex text-sm text-gray-800 transition-all duration-200 hover:text-[#02BBB6] focus:text-[#02BBB6]"> Features </Link>
                             </li>
                         </ul>
                     </div>
