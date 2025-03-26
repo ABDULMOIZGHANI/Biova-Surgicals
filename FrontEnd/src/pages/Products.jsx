@@ -5,13 +5,13 @@ import Product_card from '../components/Product_card.jsx';
 import { FaChevronDown } from "react-icons/fa";
 import WhyChoose from '../components/WhyChoose.jsx';
 
-const Products = () => {
+const Products = ({ searchQuery }) => {
 
     const [products, setProduct] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("");
     const [isOpen, setIsOpen] = useState(false);
 
-    console.log(products);
+    // console.log(products);
 
     useEffect(() => {
         axios
@@ -21,6 +21,10 @@ const Products = () => {
             })
             .catch((err) => console.log("ERROR", err));
     }, []);
+
+    const filteredProducts = products.filter((product) =>
+        product.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
     return (<>
         <div className='mt-[30px] md:mt-[70px] w-[95%] max-w-[1350px] m-auto'>
@@ -73,7 +77,7 @@ const Products = () => {
             <h1 className='text-[#00605f] playfair font-bold text-[30px] md:text-[46px] text-center tracking-[1.5px] mt-[20px]'>Explore High-Quality Surgical & Medical Equipments</h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] w-[100%] mx-auto mt-[50px]">
-                {products
+                {filteredProducts
                     .filter(product =>
                         selectedCategory === "Select Product Categories" || selectedCategory === "" || product.category === selectedCategory
                     )
@@ -81,7 +85,10 @@ const Products = () => {
                         <Product_card product={product} key={product._id} />
                     ))}
             </div>
+
         </div>
+
+
 
         <WhyChoose />
     </>

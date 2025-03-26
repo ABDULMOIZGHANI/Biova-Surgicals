@@ -24,7 +24,7 @@ const Testimonials = () => {
 
             <div className='w-[95%] lg:w-[85%] m-auto flex md:flex-row flex-col gap-[40px] justify-between relative z-[2]'>
                 {
-                    review.map(rev => <div className='flex  gap-[20px] md:w-[50%]'>
+                    review.map((rev, i) => <div key={i} className='flex  gap-[20px] md:w-[50%]'>
                         <div><img src={rev.img} alt="" className='' /></div>
 
                         <div className='flex flex-col gap-[20px]'>

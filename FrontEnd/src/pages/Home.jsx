@@ -5,10 +5,10 @@ import FeaturedProducts from '../components/FeaturedProducts'
 import Testimonials from '../components/Testimonials'
 import ShopWithConfidence from '../components/ShopWithConfidence'
 
-const Home = () => {
+const Home = ({ searchQuery }) => {
     return (
         <main>
-            <MainSection />
+            <MainSection searchQuery={searchQuery} />
             <BrandSection />
             <FeaturedProducts />
             <Testimonials />

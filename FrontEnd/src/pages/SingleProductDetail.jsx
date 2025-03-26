@@ -54,11 +54,11 @@ const SingleProductDetail = () => {
     };
 
     return (
-        <div className="w-[90%] m-auto p-4">
+        <div className="w-[100%] md:w-[90%] m-auto p-4">
             {/* Product Category */}
             <h3 className="text-gray-500 text-lg mb-2">{single_product.category}</h3>
 
-            <div className="flex flex-col lg:flex-row gap-6 px-4 sm:px-6">
+            <div className="flex flex-col lg:flex-row gap-6 px-0 sm:px-4">
                 {/* Image Gallery */}
                 <div className="flex flex-col-reverse sm:flex-row gap-4 w-full lg:w-[55%]">
                     {/* Thumbnails */}
@@ -136,9 +136,9 @@ const SingleProductDetail = () => {
                     <div className="mt-4 flex flex-col sm:flex-row gap-3">
                         <button
                             onClick={handleBuyNow}
-                            className="w-full sm:w-auto"
+                            className="px-6 py-3 border text-[#fff] border-[#02BBB6] bg-[#008f8a] rounded-lg hover:bg-[#244644] transition-colors w-full sm:w-auto"
                         >
-                            <MainButton value="BUY NOW" fullWidth />
+                            BUY NOW
                         </button>
                         <button
                             onClick={handleAddToCart}

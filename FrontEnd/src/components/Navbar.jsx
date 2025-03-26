@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { RxCross2 } from "react-icons/rx"
 import { useSelector } from "react-redux";
 
-export default function Navbar() {
+export default function Navbar({ setSearchQuery }) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -46,6 +46,7 @@ export default function Navbar() {
                             type="text"
                             placeholder="Search"
                             className="px-3 py-2 outline-none w-40"
+                            onChange={(e) => setSearchQuery(e.target.value)}
                         />
                         <button className="bg-[#02BBB6] text-white px-3 cursor-pointer py-3">
                             <IoSearch size={25} />
@@ -94,6 +95,7 @@ export default function Navbar() {
                 type="text"
                 placeholder="Search"
                 className="px-3 py-2 outline-none w-40"
+                onChange={(e) => setSearchQuery(e.target.value)}
             />
             <button className="bg-[#02BBB6] text-white px-4 cursor-pointer py-3">
                 <IoSearch />

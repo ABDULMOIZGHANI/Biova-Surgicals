@@ -9,15 +9,18 @@ import Footer from './components/Footer.jsx';
 import SingleBlog from './pages/SingleBlog.jsx';
 import Cart from './pages/Cart.jsx';
 import ThankYou from './pages/ThankYou.jsx';
+import { useState } from 'react';
 
 function App() {
 
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar setSearchQuery={setSearchQuery} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/" element={<Home searchQuery={searchQuery} />} />
+        <Route path="/products" element={<Products searchQuery={searchQuery} />} />
         <Route path="/product-detail/:id" element={<SingleProductDetail />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:title" element={<SingleBlog />} />

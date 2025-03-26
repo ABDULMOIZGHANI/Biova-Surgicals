@@ -34,7 +34,7 @@ const Cart = () => {
                     <div className="lg:col-span-2 space-y-6">
                         <div className="divide-y divide-gray-200 border border-gray-200 rounded-xl overflow-hidden shadow-sm">
                             {cartItems.map((item) => (
-                                <div key={item.id} className="p-5 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                                <div key={item._id} className="p-5 flex justify-between items-center hover:bg-gray-50 transition-colors">
                                     <Link to={`/product-detail/${item._id}`} className="flex-1">
                                         <div className="flex items-center gap-5">
                                             <div className="w-20 h-20 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
@@ -46,7 +46,7 @@ const Cart = () => {
                                             </div>
                                             <div>
                                                 <h3 className="font-medium text-gray-900 lato text-lg">{item.title}</h3>
-                                                <p className="text-gray-600 font-medium">${item.price.toFixed(2)}</p>
+                                                <p className="text-gray-600 font-medium">RS {item.price.toFixed(2)}</p>
                                                 <p className="text-sm text-gray-500">Quantity: {item.quantity}</p>
                                             </div>
                                         </div>
@@ -89,7 +89,7 @@ const Cart = () => {
                             <div className="space-y-3 mb-6">
                                 <div className="flex justify-between">
                                     <span className="text-gray-600">Subtotal</span>
-                                    <span className="font-medium">${totalPrice.toFixed(2)}</span>
+                                    <span className="font-medium">RS {totalPrice.toFixed(2)}</span>
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-gray-600">Shipping</span>
@@ -97,7 +97,7 @@ const Cart = () => {
                                 </div>
                                 <div className="flex justify-between border-t border-gray-200 pt-3">
                                     <span className="text-gray-800 font-medium">Total</span>
-                                    <span className="text-[#008581] font-bold text-lg">${totalPrice.toFixed(2)}</span>
+                                    <span className="text-[#008581] font-bold text-lg">RS {totalPrice.toFixed(2)}</span>
                                 </div>
                             </div>
 
