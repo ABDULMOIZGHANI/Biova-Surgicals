@@ -13,6 +13,7 @@ import { useState } from 'react';
 import About from './pages/About.jsx';
 import Features from './pages/Features.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
+import TermsAndConditions from './pages/TermsAndConditions.jsx';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/our-features" element={<Features />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       </Routes>
       <Footer />
     </BrowserRouter>
