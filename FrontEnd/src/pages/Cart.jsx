@@ -93,11 +93,15 @@ const Cart = () => {
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-gray-600">Shipping</span>
-                                    <span className="font-medium">Free</span>
+                                    <span className="font-medium text-gray-500">
+                                        Calculated at checkout
+                                    </span>
                                 </div>
                                 <div className="flex justify-between border-t border-gray-200 pt-3">
-                                    <span className="text-gray-800 font-medium">Total</span>
-                                    <span className="text-[#008581] font-bold text-lg">RS {totalPrice.toFixed(2)}</span>
+                                    <span className="text-gray-800 font-medium">Estimated Total</span>
+                                    <span className="text-[#008581] font-bold text-lg">
+                                        RS {totalPrice.toFixed(2)}
+                                    </span>
                                 </div>
                             </div>
 
@@ -113,10 +117,10 @@ const Cart = () => {
             )}
 
             {showCheckout && (
-                <div className="fixed inset-0 bg-[#0085816c]  flex items-center justify-center p-4 z-500">
+                <div className="fixed inset-0 bg-[#0085816c] flex items-center justify-center p-4 z-[500]">
                     <div className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
                         <CheckoutForm
-                            totalPrice={totalPrice}
+                            subtotal={totalPrice}
                             onClose={() => setShowCheckout(false)}
                         />
                     </div>
