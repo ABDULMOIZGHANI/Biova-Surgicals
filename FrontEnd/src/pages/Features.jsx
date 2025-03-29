@@ -9,11 +9,15 @@ const Features = () => {
             <div className='h-[2px] mt-[20px] bg-[#00605f]'></div>
 
             <h2 className='text-[#00605f] playfair font-bold text-[25px] md:text-[35px] tracking-[1.5px] mt-[20px]'>Premium-Quality Products</h2>
+
+
             <p className='text-[#00807b] lato text-[17px] md:text-[20px] mb-[20px]'>
                 Every item in our inventory is: <br />
-                ✅ <b>Certified</b> (ISO, CE, FDA-compliant) for safety and reliability. <br />
-                ✅ <b>Sourced from trusted manufacturers</b> with proven track records. <br />
-                ✅ <b>Rigorously tested</b> by our biomedical engineering team before reaching you.
+                <ul className='list-disc ml-5'>
+                    <li><b>Certified</b>: (ISO, CE, FDA-compliant) for safety and reliability.</li>
+                    <li><b>Sourced from trusted manufacturers</b>:  With proven track records.</li>
+                    <li><b>Rigorously tested</b>: By our biomedical engineering team before reaching you.</li>
+                </ul>
             </p>
 
             <h2 className='text-[#00605f] playfair font-bold text-[25px] md:text-[35px] tracking-[1.5px] mt-[20px]'>Competitive Pricing Without Compromise</h2>
