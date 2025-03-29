@@ -11,8 +11,8 @@ const CheckoutForm = ({ subtotal, onClose }) => {
     const navigate = useNavigate();
     const [deliveryFee, setDeliveryFee] = useState(0);
     const [totalPrice, setTotalPrice] = useState(subtotal);
-    const [availableCities, setAvailableCities] = useState([]);
-    const [isLoadingCities, setIsLoadingCities] = useState(false);
+    const [availableProvinces, setAvailableProvinces] = useState([]);
+    const [isLoadingProvinces, setIsLoadingProvinces] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const [formData, setFormData] = useState({
@@ -24,31 +24,31 @@ const CheckoutForm = ({ subtotal, onClose }) => {
         apartment: '',
         city: '',
         country: 'Pakistan',
-        postalCode: '',
+        province: '',
         saveInfo: false
     });
 
     useEffect(() => {
-        const fetchCities = async () => {
-            setIsLoadingCities(true);
+        const fetchProvinces = async () => {
+            setIsLoadingProvinces(true);
             try {
-                const response = await fetch(`${API_NAME}/api/delivery/cities`);
+                const response = await fetch(`${API_NAME}/api/delivery/provinces`);
                 const data = await response.json();
-                setAvailableCities(data.cities || []);
+                setAvailableProvinces(data.provinces || []);
             } catch (error) {
-                console.error("Error fetching cities:", error);
+                console.error("Error fetching provinces:", error);
             } finally {
-                setIsLoadingCities(false);
+                setIsLoadingProvinces(false);
             }
         };
-        fetchCities();
+        fetchProvinces();
     }, []);
 
     useEffect(() => {
-        if (formData.city) {
-            const selectedCity = availableCities.find(c => c.name === formData.city);
-            if (selectedCity) {
-                const fee = selectedCity.deliveryFee || 0;
+        if (formData.province) {
+            const selectedProvince = availableProvinces.find(p => p.name === formData.province);
+            if (selectedProvince) {
+                const fee = selectedProvince.deliveryFee || 0;
                 setDeliveryFee(fee);
                 setTotalPrice(subtotal + fee);
             }
@@ -56,7 +56,7 @@ const CheckoutForm = ({ subtotal, onClose }) => {
             setDeliveryFee(0);
             setTotalPrice(subtotal);
         }
-    }, [formData.city, subtotal, availableCities]);
+    }, [formData.province, subtotal, availableProvinces]);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -210,56 +210,56 @@ const CheckoutForm = ({ subtotal, onClose }) => {
                         <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-1">
                             Country*
                         </label>
-                        <select
+                        <input
+                            type="text"
                             id="country"
                             name="country"
                             value={formData.country}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#008581] focus:border-[#008581]"
-                        >
-                            <option value="Pakistan">Pakistan</option>
-                        </select>
+                            readOnly
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#008581] focus:border-[#008581] bg-gray-100"
+                        />
                     </div>
 
                     <div>
                         <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">
                             City*
                         </label>
-                        {isLoadingCities ? (
-                            <div className="animate-pulse py-2 bg-gray-200 rounded-lg"></div>
-                        ) : (
-                            <select
-                                id="city"
-                                name="city"
-                                value={formData.city}
-                                onChange={handleChange}
-                                required
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#008581] focus:border-[#008581]"
-                            >
-                                <option value="">Select your city</option>
-                                {availableCities.map((city) => (
-                                    <option key={city.name} value={city.name}>
-                                        {city.name} (Delivery: RS {city.deliveryFee?.toFixed(2) || 0})
-                                    </option>
-                                ))}
-                            </select>
-                        )}
-                    </div>
-
-                    <div>
-                        <label htmlFor="postalCode" className="block text-sm font-medium text-gray-700 mb-1">
-                            ZIP/Postal Code*
-                        </label>
                         <input
                             type="text"
-                            id="postalCode"
-                            name="postalCode"
-                            value={formData.postalCode}
+                            id="city"
+                            name="city"
+                            value={formData.city}
                             onChange={handleChange}
                             required
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#008581] focus:border-[#008581]"
                         />
+                    </div>
+
+                    <div>
+                        <label htmlFor="province" className="block text-sm font-medium text-gray-700 mb-1">
+                            Province*
+                        </label>
+                        {isLoadingProvinces ? (
+                            <div className="animate-pulse py-2 bg-gray-200 rounded-lg"></div>
+                        ) : (
+                            <select
+                                id="province"
+                                name="province"
+                                value={formData.province}
+                                onChange={handleChange}
+                                required
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#008581] focus:border-[#008581]"
+                            >
+                                <option value="">Select your Province</option>
+                                {availableProvinces.map((province) => (
+                                    <option key={province.name} value={province.name}>
+                                        {province.name} (Delivery: RS {province.deliveryFee?.toFixed(2) || 0})
+                                    </option>
+                                ))}
+                            </select>
+                        )}
                     </div>
                 </div>
 
@@ -283,7 +283,7 @@ const CheckoutForm = ({ subtotal, onClose }) => {
                             <span className="text-gray-600">Subtotal</span>
                             <span className="font-medium">RS {subtotal.toFixed(2)}</span>
                         </div>
-                        {formData.city && (
+                        {formData.province && (
                             <div className="flex justify-between">
                                 <span className="text-gray-600">Delivery Fee</span>
                                 <span className="font-medium">RS {deliveryFee.toFixed(2)}</span>
@@ -300,7 +300,7 @@ const CheckoutForm = ({ subtotal, onClose }) => {
                     <button
                         type="submit"
                         className="w-full px-6 py-3 bg-[#008581] hover:bg-[#006D69] text-white rounded-lg transition-colors font-medium flex justify-center items-center"
-                        disabled={!formData.city || isSubmitting}
+                        disabled={!formData.province || isSubmitting}
                     >
                         {isSubmitting ? (
                             <>

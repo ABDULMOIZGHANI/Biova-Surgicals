@@ -12,18 +12,14 @@ app.use(cors());
 app.use(express.json());
 
 const cityDeliveryFees = [
-  { name: "Karachi", deliveryFee: 200 },
-  { name: "Lahore", deliveryFee: 250 },
-  { name: "Islamabad", deliveryFee: 300 },
-  { name: "Rawalpindi", deliveryFee: 250 },
-  { name: "Peshawar", deliveryFee: 300 },
-  { name: "Quetta", deliveryFee: 350 },
-  { name: "Faisalabad", deliveryFee: 250 },
-  { name: "Multan", deliveryFee: 275 }
+  { name: "Sindh", deliveryFee: 220 },
+  { name: "Punjab", deliveryFee: 520 },
+  { name: "Balochistan", deliveryFee: 520 },
+  { name: "KPK", deliveryFee: 520 }
 ];
 
-app.get("/api/delivery/cities", (req, res) => {
-  res.json({ cities: cityDeliveryFees });
+app.get("/api/delivery/provinces", (req, res) => {
+  res.json({ provinces: cityDeliveryFees });
 });
 
 connectDB()
