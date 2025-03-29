@@ -9,8 +9,8 @@ const Home = ({ searchQuery }) => {
     return (
         <main>
             <MainSection searchQuery={searchQuery} />
-            <BrandSection />
             <FeaturedProducts />
+            <BrandSection />
             <Testimonials />
             <ShopWithConfidence />
         </main>

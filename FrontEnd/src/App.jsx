@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.jsx"
 import Products from "./pages/Products.jsx"
 import Blog from "./pages/Blog.jsx"
@@ -36,6 +36,13 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       </Routes>
+      <Link to="https://wa.me/03054440378">
+        <img
+          src="/Home/whatsApp.png"
+          alt="WhatsApp Icon"
+          className="fixed bottom-[25px] right-[25px] w-[65px] z-[9999] cursor-pointer"
+        />
+      </Link>
       <Footer />
     </BrowserRouter>
   )

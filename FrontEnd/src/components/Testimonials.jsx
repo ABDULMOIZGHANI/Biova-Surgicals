@@ -4,12 +4,12 @@ const Testimonials = () => {
     const review = [
         {
             img: "/reviews/testimonial-1.png",
-            message: "We love Landingfolio! Our designers were using it for their projects, so we already knew what kind of design they want.",
+            message: "We've been using instruments from this platform for over a year now, and the precision and durability are unmatched. The customer support team is always responsive and helpful. Highly recommended!",
             userName: "Mohammad Ali"
         },
         {
             img: "/reviews/testimonial-2.png",
-            message: "We love Landingfolio! Our designers were using it for their projects, so we already knew what kind of design they want.",
+            message: "Excellent quality medical tools that meet international standards. The prices are competitive, and delivery is always on time. This platform has become our trusted partner for all medical supplies",
             userName: "Dr. Rukhsar"
         }
     ]

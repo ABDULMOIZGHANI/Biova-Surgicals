@@ -14,16 +14,22 @@ const About = () => {
             <p className='text-[#00807b] lato text-[17px] md:text-[20px] mb-[20px]'>Founded in 2024 by three passionate biomedical engineers, Biova Surgicals was built on a vision to redefine the medical and biomedical supply industry. With expertise in the field, we recognized the challenges healthcare professionals face in sourcing reliable, high-quality supplies at competitive prices. That’s why we took on the mission to bridge this gap—offering affordable, premium-grade products while ensuring an effortless digital purchasing experience.  </p>
 
             <h2 className='text-[#00605f] playfair font-bold text-[25px] md:text-[35px] tracking-[1.5px] mt-[20px]'>Our Vision</h2>
-            <p className='text-[#00807b] lato text-[17px] md:text-[20px] mb-[20px]'>We aim to become a trusted and reliable namein the medical and biomedical supply industry by: <br />
-                ✅ Offering the best market priceswithout compromising quality. <br />
-                ✅ Modernizing the industry through digital solutionswhile preserving the traditional essence of sales and service. <br />
-                ✅ Bringing innovation and advanced solutionsto enhance medical supply chains and healthcare efficiency.  </p>
+            <p className='text-[#00807b] lato text-[17px] md:text-[20px] mb-[20px]'>We aim to become a trusted and reliable name in the medical and biomedical supply industry by: <br />
+                <ul className='list-disc ml-5'>
+                    <li>Offering the best market prices without compromising quality.</li>
+                    <li>Modernizing the industry through digital solutionswhile preserving the traditional essence of sales and service. </li>
+                    <li>Bringing innovation and advanced solutionsto enhance medical supply chains and healthcare efficiency.</li>
+                </ul>
+            </p>
 
             <h2 className='text-[#00605f] playfair font-bold text-[25px] md:text-[35px] tracking-[1.5px] mt-[20px]'>Our Mission</h2>
             <p className='text-[#00807b] lato text-[17px] md:text-[20px] mb-[20px]'>At Biova Surgicals, we are not just suppliers—we are partners in healthcare progress. We are committed to: <br />
-                - <b>Delivering Excellence</b>– Providing certified, high-quality medical and surgical supplies. <br />
-                - <b>Ensuring Accessibility</b> – Making the procurement process simple, fast, and onlinefor healthcare professionals. <br />
-                -  <b>Driving Innovation</b> – Exploring future solutionsto revolutionize the biomedical industry.</p>
+                <ul className='list-disc ml-5'>
+                    <li><b>Delivering Excellence</b>: Providing certified, high-quality medical and surgical supplies.</li>
+                    <li><b>Ensuring Accessibility</b>: Making the procurement process simple, fast, and onlinefor healthcare professionals.</li>
+                    <li><b>Driving Innovation</b>: Exploring future solutionsto revolutionize the biomedical industry.</li>
+                </ul>
+            </p>
 
             <h2 className='text-[#00605f] playfair font-bold text-[25px] md:text-[35px] tracking-[1.5px] mt-[20px]'>The Future of Medical Supply</h2>
             <p className='text-[#00807b] lato text-[17px] md:text-[20px] mb-[20px]'>We believe the future of medical supplies is smart, digital, and efficient. Our goal is to blend technology with traditional sales, offering a seamless shopping experience while continuing to introduce cutting-edge solutions that shape the industry.  </p>

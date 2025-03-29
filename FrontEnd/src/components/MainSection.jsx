@@ -43,7 +43,7 @@ const MainSection = ({ searchQuery }) => {
                     <div>
                         <p className='lato text-[#00625F] font-bold text-[16px]'>Trusted by Healthcare Professionals</p>
                         <SplitText
-                            text="Premium Surgical & Medical Equipment "
+                            text="Premium Surgical Equipments & Medical Devices"
                             className="playfair text-[30px] md:text-[40px] font-bold text-[#00625F] leading-tight"
                             delay={80}
                             animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
