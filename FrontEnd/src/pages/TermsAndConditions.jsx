@@ -123,7 +123,7 @@ const TermsAndConditions = () => {
             <p className='text-[#00807b] lato text-[17px] md:text-[20px] mb-[20px]'>
                 <ul className='list-disc ml-5'>
                     <li>In the event of a dispute, we encourage customers to <b>first contact us</b> to resolve the issue amicably. </li>
-                    <li>If a resolution cannot be reached, disputes shall be handled under the laws of <b>PAKSITAN/KARCHI</b>. </li>
+                    <li>If a resolution cannot be reached, disputes shall be handled under the laws of <b>PAKISTAN/KARCHI</b>. </li>
                 </ul>
             </p>
 
