@@ -14,6 +14,7 @@ import About from './pages/About.jsx';
 import Features from './pages/Features.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import TermsAndConditions from './pages/TermsAndConditions.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar setSearchQuery={setSearchQuery} />
       <Routes>
         <Route path="/" element={<Home searchQuery={searchQuery} />} />

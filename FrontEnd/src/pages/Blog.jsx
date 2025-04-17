@@ -4,9 +4,15 @@ import axios from 'axios';
 import { API_NAME } from "../constant/index.js";
 import { Helmet } from 'react-helmet';
 import LoadingSkeleton from '../components/LoadingSkeleton'; // You'll need to create this component
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Blog = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
     const [featuredPost, setFeaturedPost] = useState(null);

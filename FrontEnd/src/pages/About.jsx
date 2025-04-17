@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import { Award, HeartPulse, ShieldCheck, Target } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const About = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
     return (
         <>
             <Helmet>
@@ -25,7 +31,6 @@ const About = () => {
                 <meta property="og:type" content="website" />
             </Helmet>
 
-            {/* Hero Section */}
             <section className="relative bg-gradient-to-r from-teal-800 to-cyan-700 py-20 text-white">
                 <div className="container mx-auto px-4 max-w-6xl text-center">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 playfair leading-tight">
@@ -37,7 +42,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Main Content */}
             <main className="container mx-auto px-4 py-12 max-w-6xl">
                 {/* Introduction */}
                 <section className="mb-16">
@@ -48,7 +52,6 @@ const About = () => {
                     </div>
                 </section>
 
-                {/* Our Story */}
                 <section className="mb-16 grid md:grid-cols-2 gap-8 items-center">
                     <div>
                         <div className="flex items-center mb-4">
@@ -128,7 +131,6 @@ const About = () => {
                     </p>
                 </section>
 
-                {/* CTA Section */}
                 <section className="text-center py-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 playfair mb-6">Join Us on This Journey</h2>
                     <p className="text-gray-600 text-xl max-w-3xl mx-auto lato mb-8 leading-relaxed">
