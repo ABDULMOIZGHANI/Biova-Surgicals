@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className="col-span-2 md:col-span-4 xl:pr-8">
                         <img className="w-auto h-16" src="/Navbar Images/BIOVA SURGICAL LOGO.png" alt="" />
 
-                        <h1 className='playfair text-[20px] font-semibold mt-[20px]'>Stay Connected with Biova Surgicals 🏥</h1>
+                        <h1 className='playfair text-[20px] font-semibold mt-[20px]'>Stay Connected with Biova Surgicals</h1>
                         <p className="text-base leading-relaxed text-gray-600 lato">Your Trusted Partner in Medical & Surgical Supplies!</p>
 
                         <Link to="/products">
