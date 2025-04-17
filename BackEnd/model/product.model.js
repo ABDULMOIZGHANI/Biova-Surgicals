@@ -55,6 +55,9 @@ const productSchema = new mongoose.Schema(
       type: String,
       default: false
     },
+    weight: {
+      type: Number,
+    },
     reviews: [reviewSchema]
   },
   { timestamps: true }

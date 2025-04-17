@@ -10,8 +10,8 @@ const ShopWithConfidence = () => {
         },
         {
             img: "/Home/Quality.png",
-            heading: "Quality Assurance",
-            para: " Every product undergoes rigorous testing.",
+            heading: "Dedicated to Precision",
+            para: "Each item is carefully examined before reaching you.",
         },
         {
             img: "/Home/SecureShipping.png",

@@ -59,7 +59,7 @@ const MainSection = ({ searchQuery }) => {
 
                     <Link to="/products">
                         <div>
-                            <Button value="SHOP NOW & SAVE 35%" />
+                            <Button value="SHOP NOW & SAVE UPTO 35%" />
                         </div>
                     </Link>
                 </div>
